@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "dvdrental" <<-EOSQL
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$DVD_RENTAL_DB" <<-EOSQL
 
 CREATE UNIQUE INDEX CONCURRENTLY film_actor_unique
     ON film_actor (film_id, actor_id);
