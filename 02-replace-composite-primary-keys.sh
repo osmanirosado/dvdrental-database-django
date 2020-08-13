@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+echo "Replace each composite primary key by a unique together constraint and a simple auto increment surrogate key ..."
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$DVD_RENTAL_DB" <<-EOSQL
 
 CREATE UNIQUE INDEX CONCURRENTLY film_actor_unique
