@@ -15,7 +15,7 @@ See `02-replace-composite-primary-keys.sh`.
 ## Build
 
 ```[bash]
-docker build -t osmanirosado/dvdrental-database-django:2019.05
+docker build -t osmanirosado/dvdrental-database-django:2019.05 .
 ```
 
 ## References
